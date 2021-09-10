@@ -10,11 +10,19 @@ public class Price {
     public double GetValue(){
         return this.value;
     }
-    public void SetValue(float value){
+    public void SetValue(double value){
         this.value = value;
+    }
+
+    public void sum(double value){
+        this.value += value;
     }
 
     public Price(){
         this.value = 0.0f;
     }
+
+
+
+
 }

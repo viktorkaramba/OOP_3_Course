@@ -13,6 +13,9 @@ public class Weight {
     public void SetValue(int value){
         this.value = value;
     }
+    public void sum(int value){
+        this.value += value;
+    }
 
     public Weight(){
         this.value = 0;
