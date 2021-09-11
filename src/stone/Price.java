@@ -10,6 +10,7 @@ public class Price {
     public double GetValue(){
         return this.value;
     }
+
     public void SetValue(double value){
         this.value = value;
     }
@@ -21,8 +22,5 @@ public class Price {
     public Price(){
         this.value = 0.0f;
     }
-
-
-
 
 }

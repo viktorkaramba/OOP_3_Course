@@ -1,6 +1,7 @@
 package stone;
 
 import java.awt.*;
+import java.util.Comparator;
 
 public class Stone {
     private Price price;
