@@ -12,7 +12,7 @@ public class Stone {
     public Stone(Price price, Weight weight, Image image, String name){
         this.price = new Price(price.GetValue());
         this.weight = new Weight(weight.GetValue());
-        this.image = image;
+        this.image =image;
         this.name = name;
     }
 

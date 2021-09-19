@@ -14,6 +14,9 @@ public class Necklace {
         this.stones = stones;
     }
 
+    public Necklace(){
+       this.stones = new Vector<Stone>(15);
+    }
     //Constructor with one parameter
     public Necklace(Vector<Stone> stones){
         this.stones = new Vector<Stone>(stones);
