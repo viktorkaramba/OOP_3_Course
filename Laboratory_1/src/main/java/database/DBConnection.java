@@ -1,5 +1,10 @@
 package database;
 
+
+import stones.Price;
+import stones.Stone;
+import stones.Weight;
+
 import java.sql.*;
 
 public class DBConnection {
@@ -24,12 +29,14 @@ public class DBConnection {
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()){
                 String name = resultSet.getString("Name");
-                int price = resultSet.getInt("Price");
-                int weight = resultSet.getInt("Weight");
-                System.out.println("Name " + name+ " Price " + price+ " Weight " + weight);
+                Price price = new Price(resultSet.getDouble("Price"));
+                Weight weight = new Weight(resultSet.getInt("Weight"));
+                Stone stone = new Stone(price,weight,name);
+                System.out.println("Name " + name+ " Price " + price.GetValue()+ " Weight " + weight.GetValue());
             }
         }catch (SQLException e){
             System.out.println(e.toString());
         }
     }
+
 }

@@ -1,19 +1,20 @@
-package main;
-
+package stones;
 import database.DBConnection;
-import stone.*;
 
-import java.util.ArrayList;
 import java.util.Vector;
-
-public class StoneMain {
-    public static  void main(String[] args){
-
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
         DBConnection a = new DBConnection();
         a.readInfo();
         Price price1 = new Price(100);
         Price price2 = new Price(55);
-        Price price3 = new Price(12);
+        Price price3 = new Price(120);
         Weight weight1 = new Weight(1);
         Weight weight2 = new Weight(2);
         Weight weight3 = new Weight(3);
@@ -37,5 +38,4 @@ public class StoneMain {
         }
 
     }
-
 }

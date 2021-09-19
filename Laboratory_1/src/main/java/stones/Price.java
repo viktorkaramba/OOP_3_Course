@@ -1,4 +1,4 @@
-package stone;
+package stones;
 
 public class Price {
     private double value;

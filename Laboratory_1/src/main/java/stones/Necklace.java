@@ -1,4 +1,4 @@
-package stone;
+package stones;
 
 import java.util.Vector;
 import java.util.Comparator;

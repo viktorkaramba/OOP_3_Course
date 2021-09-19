@@ -1,4 +1,4 @@
-package stone;
+package stones;
 
 public class Weight {
     private int value;
