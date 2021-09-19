@@ -1,5 +1,6 @@
 package stones;
 import database.DBConnection;
+import gui.MainWindow;
 
 import java.util.Vector;
 /**
@@ -10,6 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
+        MainWindow mw = new MainWindow();
         DBConnection a = new DBConnection();
         a.readInfo();
         Price price1 = new Price(100);
