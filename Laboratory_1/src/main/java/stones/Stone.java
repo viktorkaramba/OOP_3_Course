@@ -10,42 +10,44 @@ public class Stone {
     private String name;
 
     public Stone(Price price, Weight weight, Image image, String name){
-        this.price = new Price(price.GetValue());
-        this.weight = new Weight(weight.GetValue());
+        this.price = new Price(price.getValue());
+        this.weight = new Weight(weight.getValue());
         this.image =image;
         this.name = name;
     }
 
     public Stone(Price price, Weight weight, String name){
-        this.price = new Price(price.GetValue());
-        this.weight = new Weight(weight.GetValue());
+        this.price = new Price(price.getValue());
+        this.weight = new Weight(weight.getValue());
         this.name = name;
     }
 
     public Stone(Price price, Weight weight){
-        this.price = new Price(price.GetValue());
-        this.weight = new Weight(weight.GetValue());
+        this.price = new Price(price.getValue());
+        this.weight = new Weight(weight.getValue());
     }
 
-    public Stone(Price price){
-        this.price = new Price(price.GetValue());
+    public Stone(){
+        this.price = new Price(0);
+        this.weight = new Weight(0);
+        this.name = "Unknown";
     }
 
 
-    public Weight GetWeight(){
+    public Weight getWeight(){
         return weight;
     }
 
-    public Price GetPrice(){
+    public Price getPrice(){
         return price;
     }
 
-    public Weight SetWeight(Weight weight){
-        return this.weight = new Weight(weight.GetValue());
+    public Weight setWeight(Weight weight){
+        return this.weight = new Weight(weight.getValue());
     }
 
-    public Price SetPrice(Price price){
-        return this.price = new Price(price.GetValue());
+    public Price setPrice(Price price){
+        return this.price = new Price(price.getValue());
     }
 
     public Image getImage() {

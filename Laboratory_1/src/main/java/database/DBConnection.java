@@ -9,6 +9,7 @@ import stones.Weight;
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
+import java.util.Vector;
 
 public class DBConnection extends JFrame{
     public static Connection connect(){
@@ -23,10 +24,10 @@ public class DBConnection extends JFrame{
         return connect;
     }
 
-    public Necklace readInfo(){
+    public Vector<Stone> readInfo(){
         Connection connect = DBConnection.connect();
         Statement statement = null;
-        Necklace necklace = new Necklace();
+        Vector<Stone> stones = new Vector<Stone>();
         try {
             String sql = "SELECT * FROM Rocks";
             statement = connect.createStatement();
@@ -41,15 +42,15 @@ public class DBConnection extends JFrame{
                 image = getToolkit().createImage(imageBytes);
                 ImageIcon icon = new ImageIcon(image);
                 Stone stone = new Stone(price,weight,image,name);
-                if(stone.GetPrice().GetValue()>=10000) {
-                    necklace.addStone(stone);
+                if(stone.getPrice().getValue()>=10000) {
+                    stones.add(stone);
                 }
-                System.out.println("Name " + name+ " Price " + price.GetValue()+ " Weight " + weight.GetValue());
+                System.out.println("Name " + name+ " Price " + price.getValue()+ " Weight " + weight.getValue());
             }
         }catch (SQLException e){
             System.out.println(e.toString());
         }
-        return necklace;
+        return stones;
     }
 
 }

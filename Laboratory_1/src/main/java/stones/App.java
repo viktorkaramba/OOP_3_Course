@@ -13,6 +13,7 @@ public class App
     {
         DBConnection a = new DBConnection();
         a.readInfo();
-        MainWindow mw = new MainWindow(a.readInfo());
+        Necklace necklace = new Necklace(a.readInfo());
+        MainWindow mw = new MainWindow(necklace);
     }
 }

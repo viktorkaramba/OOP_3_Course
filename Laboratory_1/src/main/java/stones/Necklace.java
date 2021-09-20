@@ -1,5 +1,6 @@
 package stones;
 
+import java.io.IOException;
 import java.util.Vector;
 import java.util.Comparator;
 
@@ -31,7 +32,7 @@ public class Necklace {
     public Weight generalWeight(){
         Weight generalWeight = new Weight();
         for(int i = 0; i<stones.size(); i++){
-            generalWeight.sum(stones.get(i).GetWeight().GetValue());
+            generalWeight.sum(stones.get(i).getWeight().getValue());
         }
         return generalWeight;
     }
@@ -40,7 +41,7 @@ public class Necklace {
     public Price generalPrice(){
         Price generalPrice = new Price();
         for(int i = 0; i<stones.size(); i++){
-           generalPrice.sum(stones.get(i).GetPrice().GetValue());
+           generalPrice.sum(stones.get(i).getPrice().getValue());
         }
         return generalPrice;
     }
@@ -52,14 +53,14 @@ public class Necklace {
         stones.sort(myPriceComparator);
     }
 
-    public Vector<Stone> searchByRange(Weight weight1, Weight weight2){
-        Vector<Stone> suitableStone = new Vector<Stone>();
-        for(int i = 0; i<stones.size(); i++){
-            if((stones.get(i).GetWeight().GetValue() >= weight1.GetValue())
-                    && (stones.get(i).GetWeight().GetValue()<=weight2.GetValue()) ){
-                suitableStone.add(stones.get(i));
+    public Vector<Stone> searchByRange(Weight weight1, Weight weight2) {
+        Vector<Stone> suitableStones = new Vector<Stone>();
+        for (int i = 0; i < stones.size(); i++) {
+            if ((stones.get(i).getWeight().getValue() >= weight1.getValue())
+                    && (stones.get(i).getWeight().getValue() <= weight2.getValue())) {
+                suitableStones.add(stones.get(i));
             }
         }
-        return suitableStone;
+        return suitableStones;
     }
 }

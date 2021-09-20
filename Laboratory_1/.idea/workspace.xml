@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f0454175-7aa2-455e-9d5d-77d6b241c1ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/database/DBConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stones/NecklaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stones/PriceComparatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stones/PriceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stones/StoneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stones/WeightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratory_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/laboratory_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/NecklaceField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/NecklaceField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stones/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stones/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stones/Necklace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stones/Necklace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stones/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stones/Price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stones/PriceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stones/PriceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stones/Stone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stones/Stone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stones/Weight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stones/Weight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stones/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stones/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/MainWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/NecklaceField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/NecklaceField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stones/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stones/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stones/Necklace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stones/Necklace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stones/Price.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stones/Price.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stones/PriceComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stones/PriceComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stones/Stone.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stones/Stone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stones/Weight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stones/Weight.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6deccf95-e610-41ed-9f50-bd226442ca9a" />
+        <option name="url" value="https://github.com/viktorkaramba/OOP_3_Course.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/PreciousStone.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/App.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/Price.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/SemiPreciousStone.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/PriceComparator.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/Weight.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/Necklace.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/stones/Stone.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/database/DBConnection.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1yLufZszuQCkQuZ9o2X48MvnHjH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Xiaomi\IdeaProjects\laboratory_1\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Xiaomi\IdeaProjects\laboratory_1\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="stones" />
+      <recent name="database" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stones.App" />
+      <module name="laboratory_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in laboratory_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="laboratory_1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBConnectionTest.readInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="laboratory_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.DBConnectionTest" />
+      <option name="METHOD_NAME" value="readInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PriceComparatorTest.compare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="laboratory_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stones" />
+      <option name="MAIN_CLASS_NAME" value="stones.PriceComparatorTest" />
+      <option name="METHOD_NAME" value="compare" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoneTest.setName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="laboratory_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stones" />
+      <option name="MAIN_CLASS_NAME" value="stones.StoneTest" />
+      <option name="METHOD_NAME" value="setName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="laboratory_1" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.laboratory_1" />
+      <item itemvalue="JUnit.StoneTest.setName" />
+      <item itemvalue="JUnit.All in laboratory_1" />
+      <item itemvalue="JUnit.PriceComparatorTest.compare" />
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.DBConnectionTest.readInfo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.All in laboratory_1" />
+        <item itemvalue="JUnit.DBConnectionTest.readInfo" />
+        <item itemvalue="JUnit.PriceComparatorTest.compare" />
+        <item itemvalue="JUnit.StoneTest.setName" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0454175-7aa2-455e-9d5d-77d6b241c1ea" name="Default Changelist" comment="" />
+      <created>1632043296399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632043296399</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

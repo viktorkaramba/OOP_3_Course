@@ -7,11 +7,11 @@ public class Price {
         this.value = value;
     }
 
-    public double GetValue(){
+    public double getValue(){
         return this.value;
     }
 
-    public void SetValue(double value){
+    public void setValue(double value){
         this.value = value;
     }
 

@@ -7,10 +7,10 @@ public class Weight {
         this.value = value;
     }
 
-    public int GetValue(){
+    public int getValue(){
         return this.value;
     }
-    public void SetValue(int value){
+    public void setValue(int value){
         this.value = value;
     }
     public void sum(int value){
