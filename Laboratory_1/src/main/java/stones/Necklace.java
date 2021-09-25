@@ -1,34 +1,42 @@
 package stones;
 
-import java.io.IOException;
 import java.util.Vector;
-import java.util.Comparator;
 
+/**
+ *
+ * @author Svynar Viktor
+ */
 public class Necklace {
+
+    /** Using for store of stones*/
     private Vector<Stone> stones;
 
-    public Vector<Stone> getStones(){
-        return this.stones;
-    }
-
-    public void setStones(Vector<Stone> stones){
-        this.stones = stones;
-    }
-
+    /** Initial field {@link  Necklace#stones}*/
     public Necklace(){
-       this.stones = new Vector<Stone>(15);
+        this.stones = new Vector<Stone>();
     }
-    //Constructor with one parameter
+
+    /** Initial field {@link  Necklace#stones}*/
     public Necklace(Vector<Stone> stones){
         this.stones = new Vector<Stone>(stones);
     }
 
-    //Function for add rock to necklace
+    /** Return value of field {@link Necklace#stones}*/
+    public Vector<Stone> getStones(){
+        return this.stones;
+    }
+
+    /** Set value of field {@link  Necklace#stones}*/
+    public void setStones(Vector<Stone> stones){
+        this.stones = stones;
+    }
+
+    /**Function for add stone to vector*/
     public void addStone(Stone stone){
         stones.add(stone);
     }
 
-    //Function for get general weight of all rocks
+    /** Function for get general weight of all stones*/
     public Weight generalWeight(){
         Weight generalWeight = new Weight();
         for(int i = 0; i<stones.size(); i++){
@@ -37,7 +45,7 @@ public class Necklace {
         return generalWeight;
     }
 
-    //Function for get general price of all rocks
+    /** Function for get general price of all stones*/
     public Price generalPrice(){
         Price generalPrice = new Price();
         for(int i = 0; i<stones.size(); i++){
@@ -46,13 +54,13 @@ public class Necklace {
         return generalPrice;
     }
 
-
-    //Function for sort stone by price
+    /** Function for sort stones by price*/
     public void sortByPrice(){
         PriceComparator myPriceComparator = new PriceComparator();
         stones.sort(myPriceComparator);
     }
 
+    /** Function for search stones by range*/
     public Vector<Stone> searchByRange(Weight weight1, Weight weight2) {
         Vector<Stone> suitableStones = new Vector<Stone>();
         for (int i = 0; i < stones.size(); i++) {

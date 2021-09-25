@@ -2,6 +2,10 @@ package stones;
 
 import java.util.Comparator;
 
+/**
+ * Used to implement a comparator for compare stone by price
+ * @author Svynar Viktor
+ */
 public class PriceComparator implements Comparator<Stone> {
 
     public int compare(Stone stone1, Stone stone2) {

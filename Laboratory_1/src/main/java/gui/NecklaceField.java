@@ -36,7 +36,7 @@ public class NecklaceField  extends JPanel implements ActionListener {
     }
 
     public void loadImages(){
-        ImageIcon chainAdditional = new ImageIcon("src/main/resources/chain.png");
+        ImageIcon chainAdditional = new ImageIcon("Laboratory_1/src/main/resources/chain.png");
         this.chain = chainAdditional.getImage();
     }
 

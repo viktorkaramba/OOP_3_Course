@@ -1,22 +1,26 @@
 package database;
 
 
-import stones.Necklace;
 import stones.Price;
 import stones.Stone;
 import stones.Weight;
-
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
 import java.util.Vector;
 
+/**
+ * Using to connect database with app
+ * @author Svynar Viktor
+ */
 public class DBConnection extends JFrame{
+
+    /** Static function that connects to the database*/
     public static Connection connect(){
         Connection connect = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            connect = DriverManager.getConnection("jdbc:sqlite:src/main/resources/Rocks.db");
+            connect = DriverManager.getConnection("jdbc:sqlite:Laboratory_1/src/main/resources/Rocks.db");
             System.out.println("Yes!!");
         }catch (ClassNotFoundException | SQLException e) {
             System.out.println(e + "");
@@ -24,6 +28,7 @@ public class DBConnection extends JFrame{
         return connect;
     }
 
+    /** Used to retrieve data from the database*/
     public Vector<Stone> readInfo(){
         Connection connect = DBConnection.connect();
         Statement statement = null;

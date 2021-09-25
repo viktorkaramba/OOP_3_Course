@@ -9,7 +9,7 @@ import java.util.Vector;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main(String[] args )
     {
         DBConnection a = new DBConnection();
         a.readInfo();
