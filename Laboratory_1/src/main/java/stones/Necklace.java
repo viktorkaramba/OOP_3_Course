@@ -61,11 +61,11 @@ public class Necklace {
     }
 
     /** Function for search stones by range*/
-    public Vector<Stone> searchByRange(Weight weight1, Weight weight2) {
+    public Vector<Stone> searchByRange(double min, double max) {
         Vector<Stone> suitableStones = new Vector<Stone>();
         for (int i = 0; i < stones.size(); i++) {
-            if ((stones.get(i).getWeight().getValue() >= weight1.getValue())
-                    && (stones.get(i).getWeight().getValue() <= weight2.getValue())) {
+            if ((stones.get(i).getTransparency() >= min)
+                    && (stones.get(i).getTransparency() <= max)) {
                 suitableStones.add(stones.get(i));
             }
         }

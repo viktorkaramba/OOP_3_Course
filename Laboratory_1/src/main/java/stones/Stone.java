@@ -23,21 +23,27 @@ public class Stone {
     /** Using for store the name of stone*/
     private String name;
 
-    /** Initial field {@link Stone#price}, {@link Stone#weight}, {@link Stone#image}, {@link Stone#name}*/
+    /** Using for store the transparency of stone*/
+    private double transparency;
+
+
+    /** Initial field {@link Stone#price}, {@link Stone#weight}, {@link Stone#image}, {@link Stone#name},{@link Stone#name}*/
     public Stone(){
         this.price = new Price(0);
         this.weight = new Weight(0);
         this.name = "Unknown";
         ImageIcon additional = new ImageIcon("Laboratory_1/src/main/resources/unknown.png");
         this.image = additional.getImage();
+        this.transparency = 0.0f;
     }
 
-    /** Initial field {@link Stone#price}, {@link Stone#weight}, {@link Stone#image}, {@link Stone#name}*/
-    public Stone(Price price, Weight weight, Image image, String name){
+    /** Initial field {@link Stone#price}, {@link Stone#weight}, {@link Stone#image}, {@link Stone#name}, {@link Stone#transparency}*/
+    public Stone(Price price, Weight weight, Image image, String name, double transparency){
         this.price = new Price(price.getValue());
         this.weight = new Weight(weight.getValue());
-        this.image =image;
+        this.image = image;
         this.name = name;
+        this.transparency = transparency;
     }
 
     /** Initial field {@link Stone#price}, {@link Stone#weight}, {@link Stone#name}*/
@@ -92,4 +98,14 @@ public class Stone {
     public void setName(String name) {
         this.name = name;
     }
+
+    public double getTransparency() {
+        return transparency;
+    }
+
+    public void setTransparency(double transparency) {
+        this.transparency = transparency;
+    }
+
+
 }

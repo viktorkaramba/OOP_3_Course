@@ -1,9 +1,8 @@
 package database;
 
 
-import stones.Price;
-import stones.Stone;
-import stones.Weight;
+import stones.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
@@ -20,7 +19,7 @@ public class DBConnection extends JFrame{
         Connection connect = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            connect = DriverManager.getConnection("jdbc:sqlite:Laboratory_1/src/main/resources/Rocks.db");
+            connect = DriverManager.getConnection("jdbc:sqlite:Laboratory_1/src/main/resources/Stones.db");
             System.out.println("Yes!!");
         }catch (ClassNotFoundException | SQLException e) {
             System.out.println(e + "");
@@ -43,19 +42,35 @@ public class DBConnection extends JFrame{
                 String name = resultSet.getString("Name");
                 Price price = new Price(resultSet.getDouble("Price"));
                 Weight weight = new Weight(resultSet.getInt("Weight"));
-                imageBytes = resultSet.getBytes(4);
+                double transparency = resultSet.getDouble("Transparency");
+                imageBytes = resultSet.getBytes(5);
                 image = getToolkit().createImage(imageBytes);
                 ImageIcon icon = new ImageIcon(image);
-                Stone stone = new Stone(price,weight,image,name);
-                if(stone.getPrice().getValue()>=10000) {
-                    stones.add(stone);
+                if(getQualityFactor(price,weight,transparency) > 300){
+                    PreciousStone preciousStone = new PreciousStone(price, weight, image, name, transparency);
+                    stones.add(preciousStone);
                 }
-                System.out.println("Name " + name+ " Price " + price.getValue()+ " Weight " + weight.getValue());
+                else {
+                    SemiPreciousStone semiPreciousStone = new SemiPreciousStone(price, weight, image, name, transparency);
+                    stones.add(semiPreciousStone);
+                }
             }
         }catch (SQLException e){
             System.out.println(e.toString());
         }
         return stones;
+    }
+
+    /** Used to count quality of a stone*/
+    public double getQualityFactor(Price price, Weight weight, double transparency){
+        double oneCarat = price.getValue()/weight.getValue();
+        double weight_ = weight.getValue();
+        while(weight_>1){
+            oneCarat*=1.5;
+            weight_--;
+        }
+        oneCarat*=transparency;
+        return oneCarat;
     }
 
 }

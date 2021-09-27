@@ -53,8 +53,8 @@ public class NecklaceField  extends JPanel implements ActionListener {
         if(checkIsClick()){
             int x_1 = 100;
             int y_1 = 300;
-            Weight first = new Weight(Integer.valueOf(mainWindow.getStartValue()));
-            Weight second = new Weight(Integer.valueOf(mainWindow.getEndValue()));
+            double first = Double.valueOf(mainWindow.getStartValue());
+            double second =Double.valueOf(mainWindow.getEndValue());
             for (int i = 0; i<necklace.searchByRange(first, second).size(); i++){
                 g.drawImage(necklace.searchByRange(first,second).get(i).getImage(),x_1,y_1,this);
                 x_1+=120;
