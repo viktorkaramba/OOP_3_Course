@@ -16,15 +16,15 @@ class StoneTest {
     Weight weight1 = new Weight(2);
     Weight weight2 = new Weight(4);
     Weight weight3 = new Weight(1);
-    Stone stone1 = new Stone(price1,weight1);
-    Stone stone2 = new Stone(price2,weight2);
-    Stone stone3 = new Stone(price3,weight3);
-    Stone stone4 = new Stone(price2,weight1);
-    Stone stone5 = new Stone(price3,weight1);
-    Stone stone6 = new Stone(price1,weight3);
-    Stone stone8 = new Stone(price3,weight2);
-    Stone stone9 = new Stone(price1,weight2);
-    Stone stone10 = new Stone(price2,weight3);
+    Stone stone1 = new Stone(price1,weight1,0.2);
+    Stone stone2 = new Stone(price2,weight2, 0.6);
+    Stone stone3 = new Stone(price3,weight3, 0.7);
+    Stone stone4 = new Stone(price2,weight1,0.3);
+    Stone stone5 = new Stone(price3,weight1,0.3);
+    Stone stone6 = new Stone(price1,weight3,0.9);
+    Stone stone8 = new Stone(price3,weight2,1);
+    Stone stone9 = new Stone(price1,weight2, 0.5);
+    Stone stone10 = new Stone(price2,weight3, 0.8);
 
     @Test
     void getWeight() {
@@ -79,5 +79,18 @@ class StoneTest {
         Stone stone = new Stone();
         stone.setName("Ruby");
         assertEquals(stone.getName(),"Ruby");
+    }
+
+    @Test
+    void getTransparency() {
+        assertEquals(stone1.getTransparency(),0.2);
+        assertEquals(stone2.getTransparency(),0.6);
+    }
+
+    @Test
+    void setTransparency() {
+        Stone stone = new Stone();
+        stone.setTransparency(0.3);
+        assertEquals(stone.getTransparency(),0.3);
     }
 }

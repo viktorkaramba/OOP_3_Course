@@ -1,14 +1,13 @@
 package stones;
 
-import stones.Price;
-import stones.Stone;
-import stones.Weight;
-
 import java.awt.*;
 
-
+/**
+ * Used to separate stones by their quality
+ * If value of quality bigger, that stone is precious
+ * @author Svynar Viktor
+ */
 public class PreciousStone extends Stone {
-
     public PreciousStone(Price price, Weight weight) {
         super(price, weight);
     }

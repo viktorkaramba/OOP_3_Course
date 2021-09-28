@@ -3,7 +3,7 @@ package stones;
 import java.util.Vector;
 
 /**
- *
+ * Using to store necklace
  * @author Svynar Viktor
  */
 public class Necklace {

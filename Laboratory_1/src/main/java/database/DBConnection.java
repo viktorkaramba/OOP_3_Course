@@ -1,8 +1,6 @@
 package database;
 
-
 import stones.*;
-
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
@@ -19,8 +17,7 @@ public class DBConnection extends JFrame{
         Connection connect = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            connect = DriverManager.getConnection("jdbc:sqlite:Laboratory_1/src/main/resources/Stones.db");
-            System.out.println("Yes!!");
+            connect = DriverManager.getConnection("jdbc:sqlite:Stones.db");
         }catch (ClassNotFoundException | SQLException e) {
             System.out.println(e + "");
         }
@@ -33,20 +30,20 @@ public class DBConnection extends JFrame{
         Statement statement = null;
         Vector<Stone> stones = new Vector<Stone>();
         try {
-            String sql = "SELECT * FROM Rocks";
+            String sql = "SELECT * FROM Stones";
             statement = connect.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             Image image;
             byte[] imageBytes;
             while (resultSet.next()){
                 String name = resultSet.getString("Name");
-                Price price = new Price(resultSet.getDouble("Price"));
+                Price price = new Price(resultSet.getFloat("Price"));
                 Weight weight = new Weight(resultSet.getInt("Weight"));
                 double transparency = resultSet.getDouble("Transparency");
                 imageBytes = resultSet.getBytes(5);
                 image = getToolkit().createImage(imageBytes);
                 ImageIcon icon = new ImageIcon(image);
-                if(getQualityFactor(price,weight,transparency) > 300){
+                if(getQualityFactor(price,weight,transparency) > 55){
                     PreciousStone preciousStone = new PreciousStone(price, weight, image, name, transparency);
                     stones.add(preciousStone);
                 }
@@ -65,10 +62,11 @@ public class DBConnection extends JFrame{
     public double getQualityFactor(Price price, Weight weight, double transparency){
         double oneCarat = price.getValue()/weight.getValue();
         double weight_ = weight.getValue();
-        while(weight_>1){
-            oneCarat*=1.5;
-            weight_--;
+        double additional = 1;
+        for(int i =0; i<weight_-1; i++){
+           additional*=1.5;
         }
+        oneCarat/=additional;
         oneCarat*=transparency;
         return oneCarat;
     }

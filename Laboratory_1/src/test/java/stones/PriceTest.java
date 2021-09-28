@@ -14,7 +14,7 @@ public class PriceTest extends StoneTest{
     @Test
     public void setValue() {
         Price price = new Price();
-        double value = 2000;
+        float value = 2000;
         price.setValue(value);
         assertEquals(price.getValue(),value);
     }

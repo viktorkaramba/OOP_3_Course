@@ -59,6 +59,13 @@ public class Stone {
         this.weight = new Weight(weight.getValue());
     }
 
+    /** Initial field {@link Stone#price}, {@link Stone#weight},  {@link Stone#transparency}*/
+    public Stone(Price price, Weight weight,double transparency){
+        this.price = new Price(price.getValue());
+        this.weight = new Weight(weight.getValue());
+        this.transparency = transparency;
+    }
+
     /** Return value of field {@link Stone#weight}*/
     public Weight getWeight(){
         return weight;

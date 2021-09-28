@@ -105,8 +105,8 @@ class NecklaceTest extends StoneTest{
         rangeStones.add(stone2);
         rangeStones.add(stone4);
         rangeStones.add(stone5);
-        for(int i = 0; i<necklace.searchByRange(0.2,0.5).size(); i++) {
-            assertEquals(necklace.searchByRange(0.2, 0.5),rangeStones);
+        for(int i = 0; i<necklace.searchByRange(0.2,0.6).size(); i++) {
+            assertEquals(necklace.searchByRange(0.2, 0.6),rangeStones);
         }
     }
 }
