@@ -28,36 +28,36 @@ public class App
         int key;
         Scanner in = new Scanner(System.in);
         key = in.nextInt();
-        switch (key){
-            case 1:
-                System.out.println(necklace.generalWeight().getValue() + " carats");
-                break;
-            case 2:
-                System.out.println(necklace.generalPrice().getValue() + "$");
-                break;
-            case 3:
-                necklace.sortByPrice();
-                for(Stone s: necklace.getStones()){
-                    System.out.println( s.getName() + " , " +  s.getPrice().getValue() + " , " + s.getWeight().getValue() + " , " + s.getTransparency());
-                }
-                break;
-            case 4:
-                double min = 0;
-                double max = 0;
-                Scanner inMin = new Scanner(System.in);
-                if(inMin.hasNextDouble()) {
-                    min = inMin.nextDouble();
-                }
-                Scanner inMax = new Scanner(System.in);
-                if(inMax.hasNextDouble()) {
-                    max = inMax.nextDouble();
-                }
-                System.out.println(max);
-                Vector<Stone> stones = new Vector<Stone>(necklace.searchByRange(min,max));
-                for(Stone s: stones){
-                    System.out.println( s.getName() + " " +  s.getPrice().getValue() + " " + s.getWeight().getValue() + " " + s.getTransparency());
-                }
-                break;
+            switch (key) {
+                case 1:
+                    System.out.println(necklace.generalWeight().getValue() + " carats");
+                    break;
+                case 2:
+                    System.out.println(necklace.generalPrice().getValue() + "$");
+                    break;
+                case 3:
+                    necklace.sortByPrice();
+                    for (Stone s : necklace.getStones()) {
+                        System.out.println(s.getName() + " , " + s.getPrice().getValue() + " , " + s.getWeight().getValue() + " , " + s.getTransparency());
+                    }
+                    break;
+                case 4:
+                    double min = 0;
+                    double max = 0;
+                    Scanner inMin = new Scanner(System.in);
+                    if (inMin.hasNextDouble()) {
+                        min = inMin.nextDouble();
+                    }
+                    Scanner inMax = new Scanner(System.in);
+                    if (inMax.hasNextDouble()) {
+                        max = inMax.nextDouble();
+                    }
+                    System.out.println(max);
+                    Vector<Stone> stones = new Vector<Stone>(necklace.searchByRange(min, max));
+                    for (Stone s : stones) {
+                        System.out.println(s.getName() + " " + s.getPrice().getValue() + " " + s.getWeight().getValue() + " " + s.getTransparency());
+                    }
+                    break;
         }
     }
 }

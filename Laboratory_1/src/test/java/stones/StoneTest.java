@@ -1,60 +1,64 @@
 package stones;
 
+import database.DBConnection;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Vector;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
 
 class StoneTest {
-    Price price1 = new Price(4000);
-    Price price2 = new Price(1000);
-    Price price3 = new Price(35000);
-    Weight weight1 = new Weight(2);
-    Weight weight2 = new Weight(4);
-    Weight weight3 = new Weight(1);
-    Stone stone1 = new Stone(price1,weight1,0.2);
-    Stone stone2 = new Stone(price2,weight2, 0.6);
-    Stone stone3 = new Stone(price3,weight3, 0.7);
-    Stone stone4 = new Stone(price2,weight1,0.3);
-    Stone stone5 = new Stone(price3,weight1,0.3);
-    Stone stone6 = new Stone(price1,weight3,0.9);
-    Stone stone8 = new Stone(price3,weight2,1);
-    Stone stone9 = new Stone(price1,weight2, 0.5);
-    Stone stone10 = new Stone(price2,weight3, 0.8);
+
+    public static Vector<Stone> stones = new Vector<>();
+
+
+    @BeforeAll
+    public static void connectDB(){
+        DBConnection db = new DBConnection();
+        stones.addAll(db.readInfo());
+    }
+
+    @AfterAll
+    public static  void closeDB(){
+        stones.clear();
+    }
 
     @Test
     void getWeight() {
-        assertEquals(stone1.getWeight().getValue(),weight1.getValue());
+        assertEquals(stones.get(1).getWeight().getValue(),3);
     }
 
     @Test
     void getPrice() {
-        assertEquals(stone1.getPrice().getValue(),price1.getValue());
+        assertEquals(stones.get(1).getPrice().getValue(),4600);
     }
 
     @Test
     void setWeight() {
-        Stone stone = new Stone();
-        stone.setWeight(weight2);
-        assertEquals(stone.getWeight().getValue(),weight2.getValue());
+        Stone stone = new PreciousStone();
+        stone.setWeight(stones.get(3).getWeight());
+        assertEquals(stone.getWeight().getValue(),2);
     }
 
     @Test
     void setPrice() {
-        Stone stone = new Stone();
-        stone.setPrice(price2);
-        assertEquals(stone.getPrice().getValue(),price2.getValue());
+        Stone stone = new PreciousStone();
+        stone.setPrice(stones.get(3).getPrice());
+        assertEquals(stone.getPrice().getValue(),4000);
     }
 
     @Test
     void getImage() {
         ImageIcon chainAdditional = new ImageIcon("src/main/resources/chain.png");
         Image image = chainAdditional.getImage();
-        Stone stone = new Stone();
+        Stone stone = new PreciousStone();
         stone.setImage(image);
         assertEquals(stone.getImage(),image);
     }
@@ -63,33 +67,33 @@ class StoneTest {
     void setImage() {
         ImageIcon chainAdditional = new ImageIcon("src/main/resources/chain.png");
         Image image = chainAdditional.getImage();
-        Stone stone = new Stone();
+        Stone stone = new PreciousStone();
         stone.setImage(image);
         assertEquals(stone.getImage(),image);
     }
 
     @Test
     void getName() {
-        Stone stone = new Stone();
+        Stone stone = new PreciousStone();
         assertEquals(stone.getName(),"Unknown");
     }
 
     @Test
     void setName() {
-        Stone stone = new Stone();
+        Stone stone = new PreciousStone();
         stone.setName("Ruby");
         assertEquals(stone.getName(),"Ruby");
     }
 
     @Test
     void getTransparency() {
-        assertEquals(stone1.getTransparency(),0.2);
-        assertEquals(stone2.getTransparency(),0.6);
+        assertEquals(stones.get(3).getTransparency(),0.5);
+        assertEquals(stones.get(8).getTransparency(),0.8);
     }
 
     @Test
     void setTransparency() {
-        Stone stone = new Stone();
+        Stone stone = new PreciousStone();
         stone.setTransparency(0.3);
         assertEquals(stone.getTransparency(),0.3);
     }

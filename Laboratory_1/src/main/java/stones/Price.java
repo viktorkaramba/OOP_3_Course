@@ -10,7 +10,7 @@ public class Price {
 
     /** Initial field {@link Price#value}*/
     public Price(){
-        this.value = 0.0f;
+        this.value = 0;
     }
 
     /** Initial field {@link Price#value}*/

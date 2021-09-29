@@ -8,11 +8,14 @@ import java.awt.*;
  * @author Svynar Viktor
  */
 public class SemiPreciousStone extends Stone {
-
+    public SemiPreciousStone(){super();}
     public SemiPreciousStone(Price price, Weight weight) {
         super(price, weight);
     }
     public SemiPreciousStone(Price price, Weight weight, Image image, String name, double transparency) {
         super(price, weight, image,name, transparency);
+    }
+    public SemiPreciousStone(Price price, Weight weight,  double transparency) {
+        super(price, weight, transparency);
     }
 }

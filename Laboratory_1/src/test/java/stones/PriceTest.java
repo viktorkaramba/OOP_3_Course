@@ -1,20 +1,38 @@
 package stones;
 
-import org.junit.Test;
+import database.DBConnection;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import java.util.Vector;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PriceTest extends StoneTest{
+class PriceTest {
+    public static Vector<Stone> stones = new Vector<>();
+
+
+    @BeforeAll
+    public static void connectDB(){
+        DBConnection db = new DBConnection();
+        stones.addAll(db.readInfo());
+    }
+
+    @AfterAll
+    public static  void closeDB(){
+        stones.clear();
+    }
 
     @Test
     public void getValue() {
-        assertEquals(stone1.getPrice().getValue(),price1.getValue());
+       assertEquals(stones.get(0).getPrice().getValue(), 900);
     }
 
     @Test
     public void setValue() {
         Price price = new Price();
-        float value = 2000;
+        double value = 2000;
         price.setValue(value);
         assertEquals(price.getValue(),value);
     }

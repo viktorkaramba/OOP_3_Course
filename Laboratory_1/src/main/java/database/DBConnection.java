@@ -24,6 +24,16 @@ public class DBConnection extends JFrame{
         return connect;
     }
 
+    public static Connection closeConnect(){
+        Connection connect = null;
+        try {
+            connect.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return connect;
+    }
+
     /** Used to retrieve data from the database*/
     public Vector<Stone> readInfo(){
         Connection connect = DBConnection.connect();

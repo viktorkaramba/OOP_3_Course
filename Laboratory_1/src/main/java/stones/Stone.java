@@ -9,7 +9,7 @@ import java.util.Comparator;
  * @author Svynar Viktor
  */
 
-public class Stone {
+public abstract class Stone {
 
     /** Using for store the price of stone*/
     private Price price;
