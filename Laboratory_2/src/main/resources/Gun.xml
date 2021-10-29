@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Guns xmlns="http://viktorkaramba.com.laboratory_2/gun"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+      xsd:schemaLocation="http://viktorkarmba.com.laboratory_2/gun Gun.xsd">
+
+    <Gun id="i-1">
+        <Model>AK-47</Model>
+        <Handy>TWO_HANDED</Handy>
+        <Origin>SSSR</Origin>
+        <TTC>
+            <Range>LONG</Range>
+            <SightingRange>800</SightingRange>
+            <PresenceOfClip>true</PresenceOfClip>
+            <AvailabilityOfOptics>false</AvailabilityOfOptics>
+        </TTC>
+        <Material>Titan</Material>
+    </Gun>
+
+    <Gun id="i-2">
+        <Model>AUG A1</Model>
+        <Handy>TWO_HANDED</Handy>
+        <Origin>Austria</Origin>
+        <TTC>
+            <Range>LONG</Range>
+            <SightingRange>650</SightingRange>
+            <PresenceOfClip>true</PresenceOfClip>
+            <AvailabilityOfOptics>true</AvailabilityOfOptics>
+        </TTC>
+        <Material>Titan</Material>
+    </Gun>
+</Guns>

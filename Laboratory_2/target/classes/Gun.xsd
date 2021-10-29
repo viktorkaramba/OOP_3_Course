@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://viktorkaramba.com.laboratory_2/gun"
+            xmlns:tns="http://viktorkaramba.com.laboratory_2/gun"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+    <xsd:element name="Guns">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Gun" type="tns:Gun" minOccurs="1" maxOccurs="unbounded">
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="Gun">
+        <xsd:sequence>
+            <xsd:element name="Model" type="xsd:string"/>
+            <xsd:element name="Handy" type="tns:Handy"/>
+            <xsd:element name="Origin" type="xsd:string"/>
+            <xsd:element name="TTC">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Range" type="tns:Range"/>
+                        <xsd:element name="SightingRange"  type="tns:SightingRange"/>
+                        <xsd:element name="PresenceOfClip" type="xsd:boolean"/>
+                        <xsd:element name="AvailabilityOfOptics" type="xsd:boolean"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Material" type="xsd:string"/>
+        </xsd:sequence>
+         <xsd:attribute name="id" type="xsd:ID"/>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Handy">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ONE_HANDED"/>
+            <xsd:enumeration value="TWO_HANDED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Range">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="SHORT"/>
+            <xsd:enumeration value="AVERAGE"/>
+            <xsd:enumeration value="LONG"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="SightingRange">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minExclusive value="0"></xsd:minExclusive>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>
