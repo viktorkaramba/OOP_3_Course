@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 
 public class Main {
@@ -24,60 +25,31 @@ public class Main {
         SaxParser saxParser = new SaxParser();
         DomParser domParser = new DomParser();
         StaxParser staxParser = new StaxParser();
-        List<Gun> gunListSax = new ArrayList<>();
-        List<Gun> gunListDom = new ArrayList<>();
-        List<Gun> gunListStax = new ArrayList<>();
-        gunListSax.addAll(saxParser.parse("src/main/resources/Gun.xml").getGun());
-        gunListDom.addAll(domParser.parse("src/main/resources/Gun.xml").getGun());
-        gunListStax.addAll(staxParser.parse("src/main/resources/Gun.xml").getGun());
+        Vector<Gun> gunSax = new Vector<>();
+        Vector<Gun> gunDom = new Vector<>();
+        Vector<Gun> gunStax = new Vector<>();
+        gunSax.addAll(saxParser.parse("src/main/resources/Gun.xml").getGun());
+        gunDom.addAll(domParser.parse("src/main/resources/Gun.xml").getGun());
+        gunStax.addAll(staxParser.parse("src/main/resources/Gun.xml").getGun());
         System.out.println("SAX");
         GunComparator gunComparator = new GunComparator();
-        gunListSax.sort(gunComparator);
-        for(Gun gun: gunListSax){
+        gunSax.sort(gunComparator);
+        for(Gun gun: gunSax){
             System.out.println(gun.toString());
         }
+        saxParser.createXML("src/main/resources/SaxParser.xml",gunSax);
         System.out.println("DOM");
-        gunListDom.sort(gunComparator);
-        for(Gun gun: gunListDom){
+
+        gunDom.sort(gunComparator);
+        for(Gun gun: gunDom){
             System.out.println(gun.toString());
         }
+        domParser.createXML("src/main/resources/DomParser.xml", gunDom);
         System.out.println("StAX");
-        gunListStax.sort(gunComparator);
-        for(Gun gun: gunListStax){
+        gunStax.sort(gunComparator);
+        for(Gun gun: gunStax){
             System.out.println(gun.toString());
         }
-//        Gun.TTC gunTTC1 = new Gun.TTC();
-//        BigDecimal number1 = new BigDecimal(322);
-//        gunTTC1.setSightingRange(number1);
-//        Gun.TTC gunTTC2 = new Gun.TTC();
-//        BigDecimal number2 = new BigDecimal(132);
-//        gunTTC2.setSightingRange(number2);
-//        Gun.TTC gunTTC3 = new Gun.TTC();
-//        BigDecimal number3 = new BigDecimal(511);
-//        gunTTC3.setSightingRange(number3);
-//        Vector<Gun.TTC> ttcVector = new Vector<>();
-//        ttcVector.add(gunTTC1);
-//        ttcVector.add(gunTTC2);
-//        ttcVector.add(gunTTC3);
-//        TTCComparator ttcComparator = new TTCComparator();
-//        ttcVector.sort(ttcComparator);
-//        for(Gun.TTC ttc: ttcVector){
-//            System.out.println(ttc.toString());
-//        }
-//        Gun gun1 = new Gun();
-//        gun1.setTTC(gunTTC1);
-//        Gun gun2 = new Gun();
-//        gun2.setTTC(gunTTC2);
-//        Gun gun3 = new Gun();
-//        gun3.setTTC(gunTTC3);
-//        Vector<Gun> gunVector = new Vector<>();
-//        gunVector.add(gun1);
-//        gunVector.add(gun2);
-//        gunVector.add(gun3);
-//        GunComparator gunComparator = new GunComparator();
-//        gunVector.sort(gunComparator);
-//        for(Gun gun: gunVector){
-//            System.out.println(gun.toString());
-//        }
+        staxParser.createXML("src/main/resources/StAXParser.xml", gunStax);
     }
 }

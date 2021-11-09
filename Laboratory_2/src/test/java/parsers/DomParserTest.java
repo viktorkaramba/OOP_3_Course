@@ -11,16 +11,16 @@ import validator.XMLValidator;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DomParserTest {
-
-    public static Guns guns = new ObjectFactory().createGuns();
 
     @BeforeAll
     public static void getFromXml() throws IOException, ParserConfigurationException, SAXException {
@@ -30,18 +30,30 @@ class DomParserTest {
         xml.validateAgainstXSD(in_xml,in_xsd);
         in_xml.close();
         in_xsd.close();
+        DomParser domParser = new DomParser();
+        Vector<Gun> guns = new Vector<>();
+        guns.addAll(domParser.parse("src/main/resources/Gun.xml").getGun());
+        domParser.createXML("src/main/resources/DomParser.xml",guns);
     }
 
     @AfterAll
     public static void clear(){
-        guns.getGun().clear();
+
     }
 
     @Test
     void parse() {
-        DomParser domParser = new DomParser();
-        List<Gun> gun = new ArrayList<>();
-        gun.addAll(domParser.parse("src/main/resources/Gun.xml").getGun());
-        guns.setGun(gun);
+        try {
+            InputStream in_xml = new FileInputStream("src/main/resources/DomParser.xml");
+            InputStream in_xsd = new FileInputStream("src/main/resources/Gun.xsd");
+            XMLValidator xml = new XMLValidator();
+            assertTrue(xml.validateAgainstXSD(in_xml,in_xsd));
+            in_xml.close();
+            in_xsd.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
